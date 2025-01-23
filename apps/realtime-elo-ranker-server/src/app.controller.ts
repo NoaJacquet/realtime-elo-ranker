@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -8,5 +8,17 @@ export class AppController {
   @Get()
   getHello(): string {
     return this.appService.getHello();
+  }
+
+  @Get('data')
+  getData() {
+    // Les données stockées dans le service sont accessibles et la méthode getData() peut être appelée pour les récupérer. Ces données vont systématiquement être à jour avec les ajouts effectués par les autres contextes.
+    return this.appService.getData();
+  } 
+  
+  @Post('data')
+  addData(@Body() data: String) {
+    // Les données stockées dans le service sont accessibles et la méthode getData() peut être appelée pour les récupérer. Ces données vont systématiquement être à jour avec les ajouts effectués par les autres contextes.
+    return this.appService.addData(data);
   }
 }
