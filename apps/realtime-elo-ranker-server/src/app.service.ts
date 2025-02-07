@@ -1,22 +1,16 @@
 import { Injectable } from '@nestjs/common';
+import { Player } from './player/interfaces/player.interface';
 
 @Injectable()
 export class AppService {
-  private data: String[];
+  private readonly players: Player[] = [];
 
-  constructor() {
-    this.data = [];
-  }
 
   getHello(): string {
     return 'Hello World!';
   }
 
-  addData(data: String) {
-    this.data.push(data);
-  }
-
-  getData() {
-    return this.data;
+  getPlayers() {
+    return this.players;
   }
 }

@@ -1,7 +1,6 @@
+import { Player } from './player/interfaces/player.interface';
 export declare class AppService {
-    private data;
-    constructor();
+    private readonly players;
     getHello(): string;
-    addData(data: String): void;
-    getData(): String[];
+    getPlayers(): Player[];
 }
