@@ -10,14 +10,19 @@ exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
+const player_module_1 = require("./player/player.module");
+const ranking_module_1 = require("./ranking/ranking.module");
+const match_module_1 = require("./match/match.module");
+const event_emitter_module_1 = require("./event-emitter/event-emitter.module");
+const event_emitter_service_1 = require("./event-emitter/event-emitter.service");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [],
+        imports: [player_module_1.PlayerModule, ranking_module_1.RankingModule, match_module_1.MatchModule, event_emitter_module_1.CustomEventEmitterModule],
         controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        providers: [app_service_1.AppService, event_emitter_service_1.EventEmitterService],
     })
 ], AppModule);
 //# sourceMappingURL=app.module.js.map
