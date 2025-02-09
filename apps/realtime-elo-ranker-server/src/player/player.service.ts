@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Player } from './interfaces/player.interface';
-import { EventEmitterService } from 'src/event-emitter/event-emitter.service';
+import { EventEmitterService } from '../event-emitter/event-emitter.service';
 
 @Injectable()
 export class PlayersService {
@@ -10,7 +10,6 @@ export class PlayersService {
   create(player: Player) {
     player.rank = 1000;
     this.players.push(player);
-    console.log("Envoi event");
     this.eventEmitter.emit('ranking.update', player);
   }
 

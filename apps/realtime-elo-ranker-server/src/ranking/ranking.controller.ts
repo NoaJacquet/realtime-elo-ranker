@@ -1,8 +1,8 @@
 import { Controller, Get, Sse } from '@nestjs/common';
 import { RankingService } from './ranking.service';
-import { Player } from 'src/player/interfaces/player.interface';
+import { Player } from '../player/interfaces/player.interface';
 import { fromEvent, map, Observable } from 'rxjs';
-import { EventEmitterService } from 'src/event-emitter/event-emitter.service';
+import { EventEmitterService } from '../event-emitter/event-emitter.service';
 
 @Controller()
 export class RankingController {

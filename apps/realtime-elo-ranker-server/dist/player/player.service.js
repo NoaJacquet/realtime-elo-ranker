@@ -20,7 +20,6 @@ let PlayersService = class PlayersService {
     create(player) {
         player.rank = 1000;
         this.players.push(player);
-        console.log("Envoi event");
         this.eventEmitter.emit('ranking.update', player);
     }
     findAll() {

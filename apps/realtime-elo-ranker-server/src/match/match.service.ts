@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Match } from './interfaces/match.interface';
-import { Player } from 'src/player/player.service';
-import { RankingService } from 'src/ranking/ranking.service';
+import { Player } from '../player/player.service';
+import { RankingService } from '../ranking/ranking.service';
 import { EventEmitter2 } from '@nestjs/event-emitter';
 
 @Injectable()

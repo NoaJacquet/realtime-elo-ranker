@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.EventEmitterService = void 0;
 const common_1 = require("@nestjs/common");
@@ -20,13 +21,12 @@ let EventEmitterService = class EventEmitterService {
         return this.eventEmitter;
     }
     emit(event, payload) {
-        console.log("Emitting event");
         this.eventEmitter.emit(event, payload);
     }
 };
 exports.EventEmitterService = EventEmitterService;
 exports.EventEmitterService = EventEmitterService = __decorate([
     (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [event_emitter_1.EventEmitter2])
+    __metadata("design:paramtypes", [typeof (_a = typeof event_emitter_1.EventEmitter2 !== "undefined" && event_emitter_1.EventEmitter2) === "function" ? _a : Object])
 ], EventEmitterService);
 //# sourceMappingURL=event-emitter.service.js.map

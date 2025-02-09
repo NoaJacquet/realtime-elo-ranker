@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "@realtime-elo-ranker/libs/ui",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

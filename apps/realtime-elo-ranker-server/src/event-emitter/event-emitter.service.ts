@@ -9,7 +9,6 @@ export class EventEmitterService {
     return this.eventEmitter;
   }
   emit(event: string, payload: any) {
-    console.log("Emitting event");
     this.eventEmitter.emit(event, payload);
   }
 }

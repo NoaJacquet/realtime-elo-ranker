@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { PlayersService } from 'src/player/player.service';
+import { PlayersService } from '../player/player.service';
 
 @Injectable()
 export class RankingService {
